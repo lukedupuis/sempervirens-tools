@@ -19,3 +19,7 @@ Enables starting a Node Express server while keeping a set of sockets in order t
 #### stopServer
 
 Enables stopping a Node Express server and freeing up the port.
+
+### timestamp
+
+Uses Moment.js to return a default format `[MM-DD-YY hh:mm:ssa]` and formattable string.
