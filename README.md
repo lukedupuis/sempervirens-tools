@@ -10,15 +10,17 @@ A set of tools for various purposes
 
 ### Server Tools
 
-Mainly for use in tests
-
 #### startServer
 
-Enables starting a Node Express server while keeping a set of sockets in order to stop the server later.
+Starts a Node Express server while keeping a set of sockets in order to stop the server later. (Mainly for use in tests.)
 
 #### stopServer
 
-Enables stopping a Node Express server and freeing up the port.
+Stops a server by ID started with `startServer`. (Mainly for use in tests.)
+
+#### stopAllServers
+
+Stops all servers started with `startServer`. (Mainly for use in tests.)
 
 ### timestamp
 

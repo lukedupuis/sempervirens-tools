@@ -9,8 +9,8 @@ const generateId = () => {
 };
 
 const startServer = ({
-  type,
   app,
+  type = 'http',
   port,
   message = '',
   ssl = { // Absolute paths
@@ -50,16 +50,18 @@ const stopServer = serverId => {
   }
   return new Promise(resolve => {
     serverData.server.close(() => {
-      delete serverData.server;
+      delete servers[serverId];
       resolve();
     });
   });
 };
 
 const stopAllServers = () => {
+  const promises = [];
   for (const serverId in servers) {
-    stopServer(serverId);
+    promises.push(stopServer(serverId));
   }
+  return Promise.all(promises);
 };
 
 export {
