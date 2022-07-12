@@ -36,7 +36,6 @@ const startServer = ({
   serverData.server.on('connection', socket => {
     const socketId = generateId();
     serverData.sockets[socketId] = socket;
-    serverData.server.once('close', () => delete serverData.sockets[socketId]);
   });
   servers[serverId] = serverData;
   return serverId;
