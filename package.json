@@ -1,6 +1,6 @@
 {
   "name": "@sempervirens/tools",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A set of tools for various purposes",
   "main": "index.js",
   "type": "module",
