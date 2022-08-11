@@ -50,11 +50,11 @@ function spawn({
 
           if (isLogged) {
             const commandParts = command.split('/');
-            log.stamp([
+            console.log([
               commandParts[commandParts.length - 1].toUpperCase() + ' >> ',
               prefix ? prefix + ' >> ' : '',
               line
-            ].join(''));
+            ].join('\r\n'));
           }
 
           if (readyIndicator && line.includes(readyIndicator)) {
