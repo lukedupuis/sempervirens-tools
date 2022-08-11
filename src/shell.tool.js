@@ -26,7 +26,7 @@ function shell({
       onError: error => console.error(995233, error),
       onEnd: sessionText => {
         setTimeout(() => resolve(sessionText), 3000);
-        log(`${timestamp()}   Closed`);
+        console.log(`${timestamp()}   Closed`);
       },
       // debug: true, // For debugging
       // verbose: true, // For debugging
