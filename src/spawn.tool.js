@@ -70,7 +70,7 @@ function spawn({
         allData.push(...lines);
 
       };
-      child.on('error', error => log.error(582993, error));
+      child.on('error', error => console.error(582993, error));
       child.stderr.on('data', _onData);
       child.stdout.on('data', _onData);
       child.on('close', () => {
@@ -78,7 +78,7 @@ function spawn({
         if (onReady) onReady(allData);
         resolve(allData);
       });
-    } catch(error) { log.error(603958, error); }
+    } catch(error) { console.error(603958, error); }
   });
 }
 

@@ -13,7 +13,7 @@ function zip({
     output.on('close', resolve);
 
     const archive = archiver('zip', { zlib: { level: 9 } });
-    archive.on('error', error => log.error(201974, error));
+    archive.on('error', error => console.error(201974, error));
     archive.pipe(output);
 
     srcPaths.length > 0 && srcPaths.filter(Boolean).forEach(path => {

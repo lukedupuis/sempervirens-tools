@@ -43,7 +43,7 @@ class FtpTool {
           password: pw,
           privateKey: sshKeyPath ? readFileSync(sshKeyPath, 'utf8') : ''
         });
-      } catch(error) { log.error(300691, error); }
+      } catch(error) { console.error(300691, error); }
     });
   }
 

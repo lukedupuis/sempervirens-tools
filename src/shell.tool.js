@@ -23,7 +23,7 @@ function shell({
       idleTimeOut: 5000,
       connectedMessage: `${timestamp()}   Connected`,
       readyMessage: `${timestamp()}   Running ...`,
-      onError: error => log.error(995233, error),
+      onError: error => console.error(995233, error),
       onEnd: sessionText => {
         setTimeout(() => resolve(sessionText), 3000);
         log(`${timestamp()}   Closed`);
@@ -31,7 +31,7 @@ function shell({
       // debug: true, // For debugging
       // verbose: true, // For debugging
       onData: data => logOutput && log(data), // For debugging
-      // onCommandTimeout: (command, response, stream, connection) => log.error(698992, `Command timed out: ${command} : ${response}`)
+      // onCommandTimeout: (command, response, stream, connection) => console.error(698992, `Command timed out: ${command} : ${response}`)
     });
     shell.connect();
   });
