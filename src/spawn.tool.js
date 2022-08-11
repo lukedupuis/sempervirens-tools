@@ -1,4 +1,5 @@
 import crossSpawn from 'cross-spawn';
+import timestamp from './timestamp.tool.js';
 
 function spawn({
   command = '',
@@ -51,10 +52,11 @@ function spawn({
           if (isLogged) {
             const commandParts = command.split('/');
             console.log([
-              commandParts[commandParts.length - 1].toUpperCase() + ' >> ',
-              prefix ? prefix + ' >> ' : '',
+              `${timestamp()} `,
+              `${commandParts[commandParts.length - 1].toUpperCase()} >> `,
+              prefix ? `${prefix} >> ` : '',
               line
-            ].join('\r\n'));
+            ].join(''));
           }
 
           if (readyIndicator && line.includes(readyIndicator)) {
