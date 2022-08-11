@@ -30,7 +30,7 @@ function shell({
       },
       // debug: true, // For debugging
       // verbose: true, // For debugging
-      onData: data => logOutput && log(data), // For debugging
+      onData: data => logOutput && console.log(data), // For debugging
       // onCommandTimeout: (command, response, stream, connection) => console.error(698992, `Command timed out: ${command} : ${response}`)
     });
     shell.connect();
